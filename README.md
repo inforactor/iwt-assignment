@@ -1,4 +1,4 @@
-# iwt-assignment: This is my assignment on IWT which made public.
+# iwt-assignment: This is my assignment on IWT.
 login:
 #1.   username: studnet1
       password: 123
