@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assam Engineering Institute</title>
+    <link rel="stylesheet" href="styles.css">
+    <style media="screen">
+        /* Basic styles for the body */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        /* Main content styles */
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .feature-wrapper{
+          position: relative;
+          display: flex;
+          overflow: auto;
+          justify-content: space-around;
+        }
+
+        .product-container{
+          background-color: #4CAF50;
+          text-align: center;
+          max-width: 20%;
+          position: relative;
+          border-radius: 20px;
+          border-style: solid;
+          border-width: 2px;
+          margin-top: 8px;
+          animation-name: product-anime;
+          animation-duration: 2s;
+          border-color: #4CAF50;
+        }
+        @keyframes product-anime {
+          0% {
+            opacity: 0;
+            margin-top: 500px;
+          }
+
+          100% {
+            opacity: 1; margin-top:8px;
+          }
+        }
+
+        .mou-text{
+          font-size: 1.5vw;
+          font-weight: bold;
+          color: white;
+          margin-top: 5%;
+          margin-bottom: -2%;
+        }
+
+
+
+
+        .independence-text{
+          font-size: 1.5vw;
+          font-weight: bold;
+          color: white;
+          margin-top: 5%;
+          margin-bottom: -2%;
+        }
+
+
+
+        .faculty-text{
+          font-size: 1.5vw;
+          font-weight: bold;
+          color: white;
+          margin-top: 5%;
+          margin-bottom: -2%;
+        }
+
+
+        .workshop-text{
+          font-size: 1.5vw;
+          font-weight: bold;
+          color: white;
+          margin-top: 5%;
+          margin-bottom: -2%;
+        }
+
+
+        .product-container img{
+          max-width: 100%;
+          position: relative;
+          top:5px;
+        }
+
+        /* Heading styles */
+        .blinking-text {
+            font-size: 36px;
+            animation: blink 2s infinite;
+            text-align: center;
+        }
+
+        @keyframes blink {
+            0% {
+                color: #ff0000; /* Red */
+            }
+            50% {
+                color: #00ff00; /* Green */
+            }
+            100% {
+                color: #ff0000; /* Red */
+            }
+        }
+
+
+
+
+
+        /* News ticker styles */
+        .news-ticker {
+            overflow: hidden;
+            white-space: normal;
+            animation: scrollLeft 50s linear infinite;
+        }
+
+        @keyframes scrollLeft {
+            0% {
+                transform: translateX(100%);
+            }
+            50% {
+                transform: translateX(0%);
+            }
+            100% {
+              transform: translateX(100%);
+            }
+
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="intro.html">About Us</a></li>
+                <li><a href="students.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1 class="blinking-text">Welcome to Assam Engineering Institute</h1>
+        </section>
+    </main>
+    <br>
+    <br>
+    <hr>
+
+            <div class="news-ticker">
+                <p> Admission notice | 4th semester eligibility list |  5th semester eligibility list</p>
+            </div>
+            <br>
+            <hr>
+            <br>
+
+
+
+            <div class="feature-wrapper">
+
+                   <div class="product-container">
+                      <p class="mou-text">MOU NIELIT</p>
+                      <img src="mou.jpg" alt="threee persons standing">
+                   </div>
+
+
+               <div class="product-container">
+                   <p class="independence-text">Survey</p>
+                   <img src="survey.jpg" alt="">
+               </div>
+
+
+
+                 <div class="product-container">
+                     <p class="faculty-text">Faculty</p>
+                     <img src="faculty.jpg" alt="">
+                 </div>
+
+
+
+
+                 <div class="product-container">
+                     <p class="workshop-text">Workshop</p>
+                     <img src="workshop.jpg" alt="">
+                 </div>
+
+              </div>
+</body>
+</html>

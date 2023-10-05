@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+<style>
+
+   header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.upper{
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+
+      #body{
+          font-family: Arial, sans-serif;
+          background-color: #f2f2f2;
+          text-align: center;
+      }
+
+      #h2 {
+          color: #333;
+      }
+
+      form {
+          background-color: #fff;
+          border: 1px solid #ddd;
+          padding: 20px;
+          max-width: 300px;
+          margin: 0 auto;
+      }
+
+      label {
+          display: block;
+          margin-bottom: 10px;
+          color: #333;
+      }
+
+      input[type="text"],
+      input[type="password"] {
+          width: 100%;
+          padding: 10px;
+          margin-bottom: 20px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+      }
+
+      input[type="submit"] {
+          background-color: #007bff;
+          color: #fff;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          font-weight: bold;
+      }
+
+      input[type="submit"]:hover {
+          background-color: #0056b3;
+      }
+    </style>
+    <script>
+        function validateForm() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // You should replace this with server-side validation
+            if (checkCredentials(username, password)) {
+                // Redirect to a specific web page based on the username
+                window.location.href = username + ".html";
+            }
+            else {
+                alert("Invalid username or password. Please try again.");
+            }
+
+            return false; // Prevent the form from submitting
+        }
+
+        function checkCredentials(username, password) {
+            // Replace the following with the actual credentials for each student
+            var students = {
+                "student1": "123",
+                "student2": "456",
+                "student3": "789"
+                // Add more students as needed
+            };
+
+            // Check if the username exists in the students object
+            if (students.hasOwnProperty(username)) {
+                // Check if the entered password matches the stored password
+                return students[username] === password;
+            }
+
+            return false; // Invalid username
+        }
+    </script>
+</head>
+<body id="body">
+<div class="upper">
+
+  <header>
+      <nav>
+          <ul>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="intro.html">About Us</a></li>
+              <li><a href="students.html">Login</a></li>
+          </ul>
+      </nav>
+  </header>
+</div>
+
+    <h2 id="h2">Login</h2>
+    <form onsubmit="return validateForm()">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <input type="submit" value="Login">
+    </form>
+</body>
+</html>
